@@ -10,6 +10,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center;
-    background-color: salmon;
+    background-color: rgb(243, 165, 243);
     font-family: var(--font);
+    color: rgb(38, 0, 128);
 }
