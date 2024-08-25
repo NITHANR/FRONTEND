@@ -24,3 +24,15 @@ nav{
     background: #131921;
     color: #fff;
 }
+.nav-country{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 15px;
+    font-size: 13px;
+    color: #c4c4c4;
+}
+
+.nav-country h1{
+    color: #fff;
+    font-size: 14px;
+}
