@@ -36,3 +36,57 @@ nav{
     color: #fff;
     font-size: 14px;
 }
+
+.nav-search{
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    color: gray;
+    max-width: 1000px;
+    margin-left: 15px;
+    border-radius: 4px;
+}
+
+.nav-search-gategory{
+    display: flex;
+    align-items: center;
+    background-color: #e5e5e5;
+    border-radius: 4px 0 0 4px;
+    padding: 10px 20px;
+    gap: 5px;
+}
+
+.nav-search-input{
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.nav-search-icon{
+    max-width: 41px;
+    padding: 8px;
+    border-radius: 0 4px 4px 0;
+    background-color: #ffd64f;
+}
+
+.nav-language{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.nav-text{
+    margin-left: 15px;
+}
+
+.nav-text p{
+    font-size: 10px;
+}
+
+.nav-text h1{
+    font-size: 14px;
+}
