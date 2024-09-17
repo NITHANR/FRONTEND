@@ -1,5 +1,5 @@
-const userScore =0;
-const computerScore =0;
+let userScore =0;
+let computerScore =0;
 const userScore_span= document.getElementById("user-score");
 const computerScore_span= document.getElementById("computer-score");
 const ScoreBoard_div = document.querySelector(".score-board")
@@ -13,9 +13,45 @@ function getPcChoice(){
     const pc_choice  = Math.ceil(Math.random()*3)-1;
     return pc_choices[pc_choice];
 }
+function win(pl,pc){
+    userScore++;
+    userScore_span.innerHTML=userScore;
+    const us = "User".fontsize(3).sup();
+    const ps = "Computer".fontsize(3).sup();
+    result_div.innerHTML = `<p>${((pl==='r')?"Rock":(pl==='p')?"Paper":"Scissor")}${us} Defeat's ${((pc==='r')?"Rock":(pc==='p')?"Paper":"Scissor")}${ps}. You Win 🐦‍🔥</p>`;
+}
+
+function loss(pl,pc){
+    computerScore++;
+    computerScore_span.textContent =computerScore;
+    const us = "User".fontsize(3).sub();
+    const ps = "Computer".fontsize(3).sub();
+    result_div.innerHTML = `<p>${((pc==='r')?"Rock":(pc==='p')?"Paper":"Scissor")}${us} Beat's ${((pl==='r')?"Rock":(pl==='p')?"Paper":"Scissor")}${ps}. You Lost 😭 </p>`;
+
+}
+
+function draw(){
+
+}
 
 function game(player){
-
+    const pc_choice = getPcChoice();
+    console.log(`User Choice : ${player}\nComputer Choice : ${pc_choice}`);
+    const plpc = player + pc_choice;
+    switch(plpc){
+        case "rs":
+        case "pr":
+        case "sp":
+            win(player,pc_choice);
+            break;
+        case "rr":
+        case "pp":
+        case "ss":
+            draw();
+            break;
+        default:
+            loss(player,pc_choice);
+    }
 }
 function main(){
     rock_div.addEventListener("click",function(){
@@ -34,28 +70,3 @@ function main(){
 }
 
 main();
-
-// // my code
-// const game = (player) =>{
-//     const pc_opt = ['r','p','s'];
-//     const pc_choice  = Math.ceil(Math.random()*3)-1;
-//     const pc  = pc_opt[pc_choice];
-//     if(pc===player){
-//         console.log("Tie");
-//     }
-//     else{
-//         if(pc==='r' && player === 's'){
-//             console.log("Pc won");
-//         }
-//         else if(pc==='p' && player === 'r' ){
-//             console.log("Pc won");
-//         }
-//         else if(pc ==='s' && player === 'p'){
-//             console.log("Pc won");
-//         }
-//         else{
-//             console.log("Player Won");
-//         }
-
-//     }
-// }
