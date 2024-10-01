@@ -1,0 +1,6 @@
+#desert{
+    position: absolute;
+    background-image: url("Assets/t-rex-background.png");
+    height: 200px;
+    width: 100%;
+}
